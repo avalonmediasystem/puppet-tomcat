@@ -1,4 +1,4 @@
 puppet-tomcat
 =============
 
-Re-inventing the wheel
+Puppet module for installing tomcat7
