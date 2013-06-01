@@ -19,7 +19,10 @@ class tomcat::install(
 	$admin_pass = $tomcat::params::admin_pass,
 	$http_port  = $tomcat::params::http_port
 ) inherits tomcat::params {
-  
+  if defined(jdk) {
+    include jdk
+  }
+
   package {'tomcat':
     ensure  => present,
     require => Class['nulrepo'],
