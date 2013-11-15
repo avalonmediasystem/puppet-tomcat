@@ -14,6 +14,12 @@
 
 class tomcat::service {
 
+  firewall { '130 allow tomcat access':
+    port   => 8983,
+    proto  => tcp,
+    action => accept,
+  }
+
   service { 'tomcat':
     name       => 'tomcat',
     ensure     => running,
