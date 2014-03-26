@@ -23,7 +23,8 @@ class tomcat::install(
     include jdk
   }
 
-  package {'tomcat':
+  package { 'tomcat':
+    name    => 'tomcat-7.0.32',
     ensure  => present,
     require => Class['nulrepo'],
   }
