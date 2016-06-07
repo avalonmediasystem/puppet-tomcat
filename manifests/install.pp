@@ -26,7 +26,7 @@ class tomcat::install(
   package { 'tomcat':
     name    => 'tomcat-7.0.32',
     ensure  => present,
-    require => Class['nulrepo'],
+    require => Class['avalonrepo'],
   }
 
   file { ['/usr/local/tomcat/conf/Catalina','/usr/local/tomcat/conf/Catalina/localhost']:
